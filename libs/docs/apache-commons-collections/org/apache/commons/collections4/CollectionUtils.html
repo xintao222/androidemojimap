@@ -1,0 +1,2496 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>
+CollectionUtils (Commons Collections 4.0-alpha1 API)
+</TITLE>
+
+<META NAME="keywords" CONTENT="org.apache.commons.collections4.CollectionUtils class">
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    parent.document.title="CollectionUtils (Commons Collections 4.0-alpha1 API)";
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/CollectionUtils.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../org/apache/commons/collections4/ClosureUtils.html" title="class in org.apache.commons.collections4"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../org/apache/commons/collections4/ComparatorUtils.html" title="class in org.apache.commons.collections4"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?org/apache/commons/collections4/CollectionUtils.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CollectionUtils.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+org.apache.commons.collections4</FONT>
+<BR>
+Class CollectionUtils</H2>
+<PRE>
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">java.lang.Object</A>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>org.apache.commons.collections4.CollectionUtils</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>CollectionUtils</B><DT>extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A></DL>
+</PRE>
+
+<P>
+Provides utility methods and decorators for <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> instances.
+ <p>
+ NOTE: From 4.0, method parameters will take <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> objects when possible.
+<P>
+
+<P>
+<DL>
+<DT><B>Since:</B></DT>
+  <DD>1.0</DD>
+<DT><B>Version:</B></DT>
+  <DD>$Id: CollectionUtils.java 1493564 2013-06-16 18:20:11Z tn $</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#EMPTY_COLLECTION">EMPTY_COLLECTION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;An empty unmodifiable collection.</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;C&gt; boolean</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#addAll(java.util.Collection, C[])">addAll</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+       C[]&nbsp;elements)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds all elements in the array to the given collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;C&gt; boolean</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#addAll(java.util.Collection, java.util.Enumeration)">addAll</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+       <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Enumeration.html" title="class or interface in java.util">Enumeration</A>&lt;? extends C&gt;&nbsp;enumeration)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds all elements in the enumeration to the given collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;C&gt; boolean</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#addAll(java.util.Collection, java.lang.Iterable)">addAll</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+       <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends C&gt;&nbsp;iterable)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds all elements in the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> to the given collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;C&gt; boolean</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#addAll(java.util.Collection, java.util.Iterator)">addAll</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+       <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util">Iterator</A>&lt;? extends C&gt;&nbsp;iterator)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds all elements in the iteration to the given collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T&gt; boolean</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#addIgnoreNull(java.util.Collection, T)">addIgnoreNull</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;T&gt;&nbsp;collection,
+              T&nbsp;object)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds an element to the collection unless the element is null.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O&gt; int</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#cardinality(O, java.lang.Iterable)">cardinality</A></B>(O&nbsp;obj,
+            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? super O&gt;&nbsp;coll)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the number of occurrences of <i>obj</i> in <i>coll</i>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Comparable.html" title="class or interface in java.lang">Comparable</A>&lt;? super O&gt;&gt; 
+<BR>
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#collate(java.lang.Iterable, java.lang.Iterable)">collate</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+        <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Merges two sorted Collections, a and b, into a single, sorted List
+ such that the natural ordering of the elements is retained.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Comparable.html" title="class or interface in java.lang">Comparable</A>&lt;? super O&gt;&gt; 
+<BR>
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#collate(java.lang.Iterable, java.lang.Iterable, boolean)">collate</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+        <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b,
+        boolean&nbsp;includeDuplicates)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**
+ Merges two sorted Collections, a and b, into a single, sorted List
+ such that the natural ordering of the elements is retained.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#collate(java.lang.Iterable, java.lang.Iterable, java.util.Comparator)">collate</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+        <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b,
+        <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Comparator.html" title="class or interface in java.util">Comparator</A>&lt;? super O&gt;&nbsp;c)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Merges two sorted Collections, a and b, into a single, sorted List
+ such that the ordering of the elements according to Comparator c is retained.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#collate(java.lang.Iterable, java.lang.Iterable, java.util.Comparator, boolean)">collate</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+        <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b,
+        <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Comparator.html" title="class or interface in java.util">Comparator</A>&lt;? super O&gt;&nbsp;c,
+        boolean&nbsp;includeDuplicates)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Merges two sorted Collections, a and b, into a single, sorted List
+ such that the ordering of the elements according to Comparator c is retained.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;I,O,R extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;? super O&gt;&gt; 
+<BR>
+R</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#collect(java.lang.Iterable, org.apache.commons.collections4.Transformer, R)">collect</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends I&gt;&nbsp;inputCollection,
+        <A HREF="../../../../org/apache/commons/collections4/Transformer.html" title="interface in org.apache.commons.collections4">Transformer</A>&lt;? super I,? extends O&gt;&nbsp;transformer,
+        R&nbsp;outputCollection)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transforms all elements from inputCollection with the given transformer
+ and adds them to the outputCollection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;I,O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#collect(java.lang.Iterable, org.apache.commons.collections4.Transformer)">collect</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;I&gt;&nbsp;inputCollection,
+        <A HREF="../../../../org/apache/commons/collections4/Transformer.html" title="interface in org.apache.commons.collections4">Transformer</A>&lt;? super I,? extends O&gt;&nbsp;transformer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a new Collection consisting of the elements of inputCollection
+ transformed by the given transformer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;I,O,R extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;? super O&gt;&gt; 
+<BR>
+R</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#collect(java.util.Iterator, org.apache.commons.collections4.Transformer, R)">collect</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util">Iterator</A>&lt;? extends I&gt;&nbsp;inputIterator,
+        <A HREF="../../../../org/apache/commons/collections4/Transformer.html" title="interface in org.apache.commons.collections4">Transformer</A>&lt;? super I,? extends O&gt;&nbsp;transformer,
+        R&nbsp;outputCollection)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transforms all elements from the inputIterator with the given transformer
+ and adds them to the outputCollection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;I,O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#collect(java.util.Iterator, org.apache.commons.collections4.Transformer)">collect</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util">Iterator</A>&lt;I&gt;&nbsp;inputIterator,
+        <A HREF="../../../../org/apache/commons/collections4/Transformer.html" title="interface in org.apache.commons.collections4">Transformer</A>&lt;? super I,? extends O&gt;&nbsp;transformer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transforms all elements from the inputIterator with the given transformer
+ and adds them to the outputCollection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#containsAll(java.util.Collection, java.util.Collection)">containsAll</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;coll1,
+            <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;coll2)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns <code>true</code> iff all elements of <code>coll2</code> are also contained
+ in <code>coll1</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#containsAny(java.util.Collection, java.util.Collection)">containsAny</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;coll1,
+            <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;coll2)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns <code>true</code> iff at least one element is in both collections.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;C&gt; int</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#countMatches(java.lang.Iterable, org.apache.commons.collections4.Predicate)">countMatches</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;C&gt;&nbsp;input,
+             <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super C&gt;&nbsp;predicate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Counts the number of elements in the input collection that match the
+ predicate.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#disjunction(java.lang.Iterable, java.lang.Iterable)">disjunction</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> containing the exclusive disjunction
+ (symmetric difference) of the given <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A>s.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;T&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#emptyCollection()">emptyCollection</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the immutable EMPTY_COLLECTION with generic type safety.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;T&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#emptyIfNull(java.util.Collection)">emptyIfNull</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;T&gt;&nbsp;collection)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an immutable empty collection if the argument is <code>null</code>,
+ or the argument itself otherwise.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;C&gt; boolean</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#exists(java.lang.Iterable, org.apache.commons.collections4.Predicate)">exists</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;C&gt;&nbsp;input,
+       <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super C&gt;&nbsp;predicate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Answers true if a predicate is true for at least one element of a
+ collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;E&gt; E</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#extractSingleton(java.util.Collection)">extractSingleton</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;E&gt;&nbsp;collection)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extract the lone element of the specified Collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T&gt; boolean</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#filter(java.lang.Iterable, org.apache.commons.collections4.Predicate)">filter</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;T&gt;&nbsp;collection,
+       <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super T&gt;&nbsp;predicate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filter the collection by applying a Predicate to each element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T&gt; boolean</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#filterInverse(java.lang.Iterable, org.apache.commons.collections4.Predicate)">filterInverse</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;T&gt;&nbsp;collection,
+              <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super T&gt;&nbsp;predicate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filter the collection by applying a Predicate to each element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T&gt; T</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#find(java.lang.Iterable, org.apache.commons.collections4.Predicate)">find</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;T&gt;&nbsp;collection,
+     <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super T&gt;&nbsp;predicate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Finds the first element in the given collection which matches the given predicate.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T,C extends <A HREF="../../../../org/apache/commons/collections4/Closure.html" title="interface in org.apache.commons.collections4">Closure</A>&lt;? super T&gt;&gt; 
+<BR>
+T</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#forAllButLastDo(java.lang.Iterable, C)">forAllButLastDo</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;T&gt;&nbsp;collection,
+                C&nbsp;closure)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Executes the given closure on each but the last element in the collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T,C extends <A HREF="../../../../org/apache/commons/collections4/Closure.html" title="interface in org.apache.commons.collections4">Closure</A>&lt;? super T&gt;&gt; 
+<BR>
+T</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#forAllButLastDo(java.util.Iterator, C)">forAllButLastDo</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util">Iterator</A>&lt;T&gt;&nbsp;iterator,
+                C&nbsp;closure)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Executes the given closure on each but the last element in the collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T,C extends <A HREF="../../../../org/apache/commons/collections4/Closure.html" title="interface in org.apache.commons.collections4">Closure</A>&lt;? super T&gt;&gt; 
+<BR>
+C</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#forAllDo(java.lang.Iterable, C)">forAllDo</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;T&gt;&nbsp;collection,
+         C&nbsp;closure)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Executes the given closure on each element in the collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T,C extends <A HREF="../../../../org/apache/commons/collections4/Closure.html" title="interface in org.apache.commons.collections4">Closure</A>&lt;? super T&gt;&gt; 
+<BR>
+C</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#forAllDo(java.util.Iterator, C)">forAllDo</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util">Iterator</A>&lt;T&gt;&nbsp;iterator,
+         C&nbsp;closure)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Executes the given closure on each element in the collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T&gt; T</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#get(java.lang.Iterable, int)">get</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;T&gt;&nbsp;iterable,
+    int&nbsp;index)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the <code>index</code>-th value in the <code>iterable</code>'s <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util"><CODE>Iterator</CODE></A>, throwing
+ <code>IndexOutOfBoundsException</code> if there is no such element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T&gt; T</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#get(java.util.Iterator, int)">get</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util">Iterator</A>&lt;T&gt;&nbsp;iterator,
+    int&nbsp;index)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the <code>index</code>-th value in <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util"><CODE>Iterator</CODE></A>, throwing
+ <code>IndexOutOfBoundsException</code> if there is no such element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;K,V&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.Entry.html" title="class or interface in java.util">Map.Entry</A>&lt;K,V&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#get(java.util.Map, int)">get</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html" title="class or interface in java.util">Map</A>&lt;K,V&gt;&nbsp;map,
+    int&nbsp;index)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the <code>index</code>-th <code>Map.Entry</code> in the <code>map</code>'s <code>entrySet</code>,
+ throwing <code>IndexOutOfBoundsException</code> if there is no such element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#get(java.lang.Object, int)">get</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A>&nbsp;object,
+    int&nbsp;index)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the <code>index</code>-th value in <code>object</code>, throwing
+ <code>IndexOutOfBoundsException</code> if there is no such element or
+ <code>IllegalArgumentException</code> if <code>object</code> is not an
+ instance of one of the supported types.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html" title="class or interface in java.util">Map</A>&lt;O,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Integer.html" title="class or interface in java.lang">Integer</A>&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#getCardinalityMap(java.lang.Iterable)">getCardinalityMap</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;coll)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html" title="class or interface in java.util"><CODE>Map</CODE></A> mapping each unique element in the given
+ <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> to an <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Integer.html" title="class or interface in java.lang"><CODE>Integer</CODE></A> representing the number
+ of occurrences of that element in the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#intersection(java.lang.Iterable, java.lang.Iterable)">intersection</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+             <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> containing the intersection of the given
+ <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A>s.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#isEmpty(java.util.Collection)">isEmpty</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;coll)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Null-safe check if the specified collection is empty.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#isEqualCollection(java.util.Collection, java.util.Collection)">isEqualCollection</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;a,
+                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;b)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns <tt>true</tt> iff the given <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A>s contain
+ exactly the same elements with exactly the same cardinalities.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#isEqualCollection(java.util.Collection, java.util.Collection, org.apache.commons.collections4.functors.Equator)">isEqualCollection</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;a,
+                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;b,
+                  <A HREF="../../../../org/apache/commons/collections4/functors/Equator.html" title="interface in org.apache.commons.collections4.functors">Equator</A>&lt;?&gt;&nbsp;equator)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns <tt>true</tt> iff the given <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A>s contain
+ exactly the same elements with exactly the same cardinalities.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#isFull(java.util.Collection)">isFull</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;? extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A>&gt;&nbsp;coll)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns true if no more elements can be added to the Collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#isNotEmpty(java.util.Collection)">isNotEmpty</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;coll)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Null-safe check if the specified collection is not empty.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#isProperSubCollection(java.util.Collection, java.util.Collection)">isProperSubCollection</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;a,
+                      <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;b)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns <tt>true</tt> iff <i>a</i> is a <i>proper</i> sub-collection of <i>b</i>,
+ that is, iff the cardinality of <i>e</i> in <i>a</i> is less
+ than or equal to the cardinality of <i>e</i> in <i>b</i>,
+ for each element <i>e</i> in <i>a</i>, and there is at least one
+ element <i>f</i> such that the cardinality of <i>f</i> in <i>b</i>
+ is strictly greater than the cardinality of <i>f</i> in <i>a</i>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#isSubCollection(java.util.Collection, java.util.Collection)">isSubCollection</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;a,
+                <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;b)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns <tt>true</tt> iff <i>a</i> is a sub-collection of <i>b</i>,
+ that is, iff the cardinality of <i>e</i> in <i>a</i> is less than or
+ equal to the cardinality of <i>e</i> in <i>b</i>, for each element <i>e</i>
+ in <i>a</i>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#maxSize(java.util.Collection)">maxSize</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;? extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A>&gt;&nbsp;coll)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get the maximum number of elements that the Collection can contain.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;E&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;E&gt;&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#permutations(java.util.Collection)">permutations</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;E&gt;&nbsp;collection)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> of all the permutations of the input collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;C&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#predicatedCollection(java.util.Collection, org.apache.commons.collections4.Predicate)">predicatedCollection</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+                     <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super C&gt;&nbsp;predicate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a predicated (validating) collection backed by the given collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;E&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;E&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#removeAll(java.util.Collection, java.util.Collection)">removeAll</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;E&gt;&nbsp;collection,
+          <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;remove)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes the elements in <code>remove</code> from <code>collection</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;C&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#retainAll(java.util.Collection, java.util.Collection)">retainAll</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+          <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;retain)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a collection containing all the elements in <code>collection</code>
+ that are also in <code>retain</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#reverseArray(java.lang.Object[])">reverseArray</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A>[]&nbsp;array)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reverses the order of the given array.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#select(java.lang.Iterable, org.apache.commons.collections4.Predicate)">select</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;inputCollection,
+       <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super O&gt;&nbsp;predicate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selects all elements from input collection which match the given
+ predicate into an output collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O,R extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;? super O&gt;&gt; 
+<BR>
+R</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#select(java.lang.Iterable, org.apache.commons.collections4.Predicate, R)">select</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;inputCollection,
+       <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super O&gt;&nbsp;predicate,
+       R&nbsp;outputCollection)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selects all elements from input collection which match the given
+ predicate and adds them to outputCollection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#selectRejected(java.lang.Iterable, org.apache.commons.collections4.Predicate)">selectRejected</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;inputCollection,
+               <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super O&gt;&nbsp;predicate)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selects all elements from inputCollection which don't match the given
+ predicate into an output collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O,R extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;? super O&gt;&gt; 
+<BR>
+R</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#selectRejected(java.lang.Iterable, org.apache.commons.collections4.Predicate, R)">selectRejected</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;inputCollection,
+               <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super O&gt;&nbsp;predicate,
+               R&nbsp;outputCollection)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Selects all elements from inputCollection which don't match the given
+ predicate and adds them to outputCollection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#size(java.lang.Object)">size</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A>&nbsp;object)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the size of the collection/iterator specified.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#sizeIsEmpty(java.lang.Object)">sizeIsEmpty</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A>&nbsp;object)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Checks if the specified collection/array/iterator is empty.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#subtract(java.lang.Iterable, java.lang.Iterable)">subtract</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+         <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a new <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> containing <tt><i>a</i> - <i>b</i></tt>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#subtract(java.lang.Iterable, java.lang.Iterable, org.apache.commons.collections4.Predicate)">subtract</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+         <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b,
+         <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;O&gt;&nbsp;p)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a new <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> containing <i>a</i> minus a subset of
+ <i>b</i>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;C&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#synchronizedCollection(java.util.Collection)">synchronizedCollection</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a synchronized collection backed by the given collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;C&gt; void</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#transform(java.util.Collection, org.apache.commons.collections4.Transformer)">transform</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+          <A HREF="../../../../org/apache/commons/collections4/Transformer.html" title="interface in org.apache.commons.collections4">Transformer</A>&lt;? super C,? extends C&gt;&nbsp;transformer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transform the collection by applying a Transformer to each element.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;E&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;E&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#transformingCollection(java.util.Collection, org.apache.commons.collections4.Transformer)">transformingCollection</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;E&gt;&nbsp;collection,
+                       <A HREF="../../../../org/apache/commons/collections4/Transformer.html" title="interface in org.apache.commons.collections4">Transformer</A>&lt;? super E,? extends E&gt;&nbsp;transformer)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a transformed bag backed by the given collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#union(java.lang.Iterable, java.lang.Iterable)">union</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+      <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> containing the union of the given
+ <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A>s.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;C&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#unmodifiableCollection(java.util.Collection)">unmodifiableCollection</A></B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an unmodifiable collection backed by the given collection.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#clone()" title="class or interface in java.lang">clone</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang">equals</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#finalize()" title="class or interface in java.lang">finalize</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#getClass()" title="class or interface in java.lang">getClass</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#hashCode()" title="class or interface in java.lang">hashCode</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#notify()" title="class or interface in java.lang">notify</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#notifyAll()" title="class or interface in java.lang">notifyAll</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#toString()" title="class or interface in java.lang">toString</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#wait()" title="class or interface in java.lang">wait</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#wait(long)" title="class or interface in java.lang">wait</A>, <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html#wait(long, int)" title="class or interface in java.lang">wait</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="EMPTY_COLLECTION"><!-- --></A><H3>
+EMPTY_COLLECTION</H3>
+<PRE>
+public static final <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A> <B>EMPTY_COLLECTION</B></PRE>
+<DL>
+<DD>An empty unmodifiable collection.
+ The JDK provides empty Set and List implementations which could be used for
+ this purpose. However they could be cast to Set or List which might be
+ undesirable. This implementation only implements Collection.
+<P>
+<DL>
+</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="emptyCollection()"><!-- --></A><H3>
+emptyCollection</H3>
+<PRE>
+public static &lt;T&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;T&gt; <B>emptyCollection</B>()</PRE>
+<DL>
+<DD>Returns the immutable EMPTY_COLLECTION with generic type safety.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>T</CODE> - the element type
+<DT><B>Returns:</B><DD>immutable empty collection<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#EMPTY_COLLECTION"><CODE>EMPTY_COLLECTION</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="emptyIfNull(java.util.Collection)"><!-- --></A><H3>
+emptyIfNull</H3>
+<PRE>
+public static &lt;T&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;T&gt; <B>emptyIfNull</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;T&gt;&nbsp;collection)</PRE>
+<DL>
+<DD>Returns an immutable empty collection if the argument is <code>null</code>,
+ or the argument itself otherwise.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>T</CODE> - the element type<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection, possibly <code>null</code>
+<DT><B>Returns:</B><DD>an empty collection if the argument is <code>null</code></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="union(java.lang.Iterable, java.lang.Iterable)"><!-- --></A><H3>
+union</H3>
+<PRE>
+public static &lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt; <B>union</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+                                      <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b)</PRE>
+<DL>
+<DD>Returns a <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> containing the union of the given
+ <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A>s.
+ <p>
+ The cardinality of each element in the returned <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> will
+ be equal to the maximum of the cardinality of that element in the two
+ given <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A>s.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the generic type that is able to represent the types contained
+        in both input collections.<DT><B>Parameters:</B><DD><CODE>a</CODE> - the first collection, must not be null<DD><CODE>b</CODE> - the second collection, must not be null
+<DT><B>Returns:</B><DD>the union of the two collections<DT><B>See Also:</B><DD><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html#addAll(java.util.Collection)" title="class or interface in java.util"><CODE>Collection.addAll(java.util.Collection<? extends E>)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="intersection(java.lang.Iterable, java.lang.Iterable)"><!-- --></A><H3>
+intersection</H3>
+<PRE>
+public static &lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt; <B>intersection</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+                                             <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b)</PRE>
+<DL>
+<DD>Returns a <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> containing the intersection of the given
+ <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A>s.
+ <p>
+ The cardinality of each element in the returned <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> will
+ be equal to the minimum of the cardinality of that element in the two
+ given <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A>s.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the generic type that is able to represent the types contained
+        in both input collections.<DT><B>Parameters:</B><DD><CODE>a</CODE> - the first collection, must not be null<DD><CODE>b</CODE> - the second collection, must not be null
+<DT><B>Returns:</B><DD>the intersection of the two collections<DT><B>See Also:</B><DD><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html#retainAll(java.util.Collection)" title="class or interface in java.util"><CODE>Collection.retainAll(java.util.Collection<?>)</CODE></A>, 
+<A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#containsAny(java.util.Collection, java.util.Collection)"><CODE>containsAny(java.util.Collection<?>, java.util.Collection<?>)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="disjunction(java.lang.Iterable, java.lang.Iterable)"><!-- --></A><H3>
+disjunction</H3>
+<PRE>
+public static &lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt; <B>disjunction</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+                                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b)</PRE>
+<DL>
+<DD>Returns a <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> containing the exclusive disjunction
+ (symmetric difference) of the given <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A>s.
+ <p>
+ The cardinality of each element <i>e</i> in the returned
+ <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> will be equal to
+ <tt>max(cardinality(<i>e</i>,<i>a</i>),cardinality(<i>e</i>,<i>b</i>)) - min(cardinality(<i>e</i>,<i>a</i>),
+ cardinality(<i>e</i>,<i>b</i>))</tt>.
+ <p>
+ This is equivalent to
+ <tt><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#subtract(java.lang.Iterable, java.lang.Iterable)"><CODE>subtract</CODE></A>(<A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#union(java.lang.Iterable, java.lang.Iterable)"><CODE>union(a,b)</CODE></A>,<A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#intersection(java.lang.Iterable, java.lang.Iterable)"><CODE>intersection(a,b)</CODE></A>)</tt>
+ or
+ <tt><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#union(java.lang.Iterable, java.lang.Iterable)"><CODE>union</CODE></A>(<A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#subtract(java.lang.Iterable, java.lang.Iterable)"><CODE>subtract(a,b)</CODE></A>,<A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#subtract(java.lang.Iterable, java.lang.Iterable)"><CODE>subtract(b,a)</CODE></A>)</tt>.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the generic type that is able to represent the types contained
+        in both input collections.<DT><B>Parameters:</B><DD><CODE>a</CODE> - the first collection, must not be null<DD><CODE>b</CODE> - the second collection, must not be null
+<DT><B>Returns:</B><DD>the symmetric difference of the two collections</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="subtract(java.lang.Iterable, java.lang.Iterable)"><!-- --></A><H3>
+subtract</H3>
+<PRE>
+public static &lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt; <B>subtract</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+                                         <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b)</PRE>
+<DL>
+<DD>Returns a new <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> containing <tt><i>a</i> - <i>b</i></tt>.
+ The cardinality of each element <i>e</i> in the returned <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A>
+ will be the cardinality of <i>e</i> in <i>a</i> minus the cardinality
+ of <i>e</i> in <i>b</i>, or zero, whichever is greater.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the generic type that is able to represent the types contained
+        in both input collections.<DT><B>Parameters:</B><DD><CODE>a</CODE> - the collection to subtract from, must not be null<DD><CODE>b</CODE> - the collection to subtract, must not be null
+<DT><B>Returns:</B><DD>a new collection with the results<DT><B>See Also:</B><DD><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html#removeAll(java.util.Collection)" title="class or interface in java.util"><CODE>Collection.removeAll(java.util.Collection<?>)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="subtract(java.lang.Iterable, java.lang.Iterable, org.apache.commons.collections4.Predicate)"><!-- --></A><H3>
+subtract</H3>
+<PRE>
+public static &lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt; <B>subtract</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+                                         <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b,
+                                         <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;O&gt;&nbsp;p)</PRE>
+<DL>
+<DD>Returns a new <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> containing <i>a</i> minus a subset of
+ <i>b</i>.  Only the elements of <i>b</i> that satisfy the predicate
+ condition, <i>p</i> are subtracted from <i>a</i>.
+
+ <p>The cardinality of each element <i>e</i> in the returned <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A>
+ that satisfies the predicate condition will be the cardinality of <i>e</i> in <i>a</i>
+ minus the cardinality of <i>e</i> in <i>b</i>, or zero, whichever is greater.</p>
+ <p>The cardinality of each element <i>e</i> in the returned <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> that does <b>not</b>
+ satisfy the predicate condition will be equal to the cardinality of <i>e</i> in <i>a</i>.</p>
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the generic type that is able to represent the types contained
+        in both input collections.<DT><B>Parameters:</B><DD><CODE>a</CODE> - the collection to subtract from, must not be null<DD><CODE>b</CODE> - the collection to subtract, must not be null<DD><CODE>p</CODE> - the condition used to determine which elements of <i>b</i> are
+        subtracted.
+<DT><B>Returns:</B><DD>a new collection with the results<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+<DT><B>See Also:</B><DD><A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html#removeAll(java.util.Collection)" title="class or interface in java.util"><CODE>Collection.removeAll(java.util.Collection<?>)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="containsAll(java.util.Collection, java.util.Collection)"><!-- --></A><H3>
+containsAll</H3>
+<PRE>
+public static boolean <B>containsAll</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;coll1,
+                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;coll2)</PRE>
+<DL>
+<DD>Returns <code>true</code> iff all elements of <code>coll2</code> are also contained
+ in <code>coll1</code>. The cardinality of values in <code>coll2</code> is not taken into account,
+ which is the same behavior as <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html#containsAll(java.util.Collection)" title="class or interface in java.util"><CODE>Collection.containsAll(Collection)</CODE></A>.
+ <p>
+ In other words, this method returns <code>true</code> iff the
+ <A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#intersection(java.lang.Iterable, java.lang.Iterable)"><CODE>intersection(java.lang.Iterable<? extends O>, java.lang.Iterable<? extends O>)</CODE></A> of <i>coll1</i> and <i>coll2</i> has the same cardinality as
+ the set of unique values from <code>coll2</code>. In case <code>coll2</code> is empty, <code>true</code>
+ will be returned.
+ <p>
+ This method is intended as a replacement for <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html#containsAll(java.util.Collection)" title="class or interface in java.util"><CODE>Collection.containsAll(Collection)</CODE></A>
+ with a guaranteed runtime complexity of <code>O(n + m)</code>. Depending on the type of
+ <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> provided, this method will be much faster than calling
+ <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html#containsAll(java.util.Collection)" title="class or interface in java.util"><CODE>Collection.containsAll(Collection)</CODE></A> instead, though this will come at the
+ cost of an additional space complexity O(n).
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>coll1</CODE> - the first collection, must not be null<DD><CODE>coll2</CODE> - the second collection, must not be null
+<DT><B>Returns:</B><DD><code>true</code> iff the intersection of the collections has the same cardinality
+   as the set of unique elements from the second collection<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="containsAny(java.util.Collection, java.util.Collection)"><!-- --></A><H3>
+containsAny</H3>
+<PRE>
+public static boolean <B>containsAny</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;coll1,
+                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;coll2)</PRE>
+<DL>
+<DD>Returns <code>true</code> iff at least one element is in both collections.
+ <p>
+ In other words, this method returns <code>true</code> iff the
+ <A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#intersection(java.lang.Iterable, java.lang.Iterable)"><CODE>intersection(java.lang.Iterable<? extends O>, java.lang.Iterable<? extends O>)</CODE></A> of <i>coll1</i> and <i>coll2</i> is not empty.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>coll1</CODE> - the first collection, must not be null<DD><CODE>coll2</CODE> - the second collection, must not be null
+<DT><B>Returns:</B><DD><code>true</code> iff the intersection of the collections is non-empty<DT><B>Since:</B></DT>
+  <DD>2.1</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#intersection(java.lang.Iterable, java.lang.Iterable)"><CODE>intersection(java.lang.Iterable<? extends O>, java.lang.Iterable<? extends O>)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getCardinalityMap(java.lang.Iterable)"><!-- --></A><H3>
+getCardinalityMap</H3>
+<PRE>
+public static &lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html" title="class or interface in java.util">Map</A>&lt;O,<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Integer.html" title="class or interface in java.lang">Integer</A>&gt; <B>getCardinalityMap</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;coll)</PRE>
+<DL>
+<DD>Returns a <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html" title="class or interface in java.util"><CODE>Map</CODE></A> mapping each unique element in the given
+ <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> to an <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Integer.html" title="class or interface in java.lang"><CODE>Integer</CODE></A> representing the number
+ of occurrences of that element in the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A>.
+ <p>
+ Only those elements present in the collection will appear as
+ keys in the map.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the type of object in the returned <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html" title="class or interface in java.util"><CODE>Map</CODE></A>. This is a super type of <I>.<DT><B>Parameters:</B><DD><CODE>coll</CODE> - the collection to get the cardinality map for, must not be null
+<DT><B>Returns:</B><DD>the populated cardinality map</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSubCollection(java.util.Collection, java.util.Collection)"><!-- --></A><H3>
+isSubCollection</H3>
+<PRE>
+public static boolean <B>isSubCollection</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;a,
+                                      <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;b)</PRE>
+<DL>
+<DD>Returns <tt>true</tt> iff <i>a</i> is a sub-collection of <i>b</i>,
+ that is, iff the cardinality of <i>e</i> in <i>a</i> is less than or
+ equal to the cardinality of <i>e</i> in <i>b</i>, for each element <i>e</i>
+ in <i>a</i>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>a</CODE> - the first (sub?) collection, must not be null<DD><CODE>b</CODE> - the second (super?) collection, must not be null
+<DT><B>Returns:</B><DD><code>true</code> iff <i>a</i> is a sub-collection of <i>b</i><DT><B>See Also:</B><DD><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#isProperSubCollection(java.util.Collection, java.util.Collection)"><CODE>isProperSubCollection(java.util.Collection<?>, java.util.Collection<?>)</CODE></A>, 
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html#containsAll(java.util.Collection)" title="class or interface in java.util"><CODE>Collection.containsAll(java.util.Collection<?>)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isProperSubCollection(java.util.Collection, java.util.Collection)"><!-- --></A><H3>
+isProperSubCollection</H3>
+<PRE>
+public static boolean <B>isProperSubCollection</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;a,
+                                            <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;b)</PRE>
+<DL>
+<DD>Returns <tt>true</tt> iff <i>a</i> is a <i>proper</i> sub-collection of <i>b</i>,
+ that is, iff the cardinality of <i>e</i> in <i>a</i> is less
+ than or equal to the cardinality of <i>e</i> in <i>b</i>,
+ for each element <i>e</i> in <i>a</i>, and there is at least one
+ element <i>f</i> such that the cardinality of <i>f</i> in <i>b</i>
+ is strictly greater than the cardinality of <i>f</i> in <i>a</i>.
+ <p>
+ The implementation assumes
+ <ul>
+    <li><code>a.size()</code> and <code>b.size()</code> represent the
+    total cardinality of <i>a</i> and <i>b</i>, resp. </li>
+    <li><code>a.size() < Integer.MAXVALUE</code></li>
+ </ul>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>a</CODE> - the first (sub?) collection, must not be null<DD><CODE>b</CODE> - the second (super?) collection, must not be null
+<DT><B>Returns:</B><DD><code>true</code> iff <i>a</i> is a <i>proper</i> sub-collection of <i>b</i><DT><B>See Also:</B><DD><A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#isSubCollection(java.util.Collection, java.util.Collection)"><CODE>isSubCollection(java.util.Collection<?>, java.util.Collection<?>)</CODE></A>, 
+<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html#containsAll(java.util.Collection)" title="class or interface in java.util"><CODE>Collection.containsAll(java.util.Collection<?>)</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isEqualCollection(java.util.Collection, java.util.Collection)"><!-- --></A><H3>
+isEqualCollection</H3>
+<PRE>
+public static boolean <B>isEqualCollection</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;a,
+                                        <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;b)</PRE>
+<DL>
+<DD>Returns <tt>true</tt> iff the given <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A>s contain
+ exactly the same elements with exactly the same cardinalities.
+ <p>
+ That is, iff the cardinality of <i>e</i> in <i>a</i> is
+ equal to the cardinality of <i>e</i> in <i>b</i>,
+ for each element <i>e</i> in <i>a</i> or <i>b</i>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>a</CODE> - the first collection, must not be null<DD><CODE>b</CODE> - the second collection, must not be null
+<DT><B>Returns:</B><DD><code>true</code> iff the collections contain the same elements with the same cardinalities.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isEqualCollection(java.util.Collection, java.util.Collection, org.apache.commons.collections4.functors.Equator)"><!-- --></A><H3>
+isEqualCollection</H3>
+<PRE>
+public static boolean <B>isEqualCollection</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;a,
+                                        <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;b,
+                                        <A HREF="../../../../org/apache/commons/collections4/functors/Equator.html" title="interface in org.apache.commons.collections4.functors">Equator</A>&lt;?&gt;&nbsp;equator)</PRE>
+<DL>
+<DD>Returns <tt>true</tt> iff the given <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A>s contain
+ exactly the same elements with exactly the same cardinalities.
+ <p>
+ That is, iff the cardinality of <i>e</i> in <i>a</i> is
+ equal to the cardinality of <i>e</i> in <i>b</i>,
+ for each element <i>e</i> in <i>a</i> or <i>b</i>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>a</CODE> - the first collection, must not be null<DD><CODE>b</CODE> - the second collection, must not be null<DD><CODE>equator</CODE> - the Equator used for testing equality
+<DT><B>Returns:</B><DD><code>true</code> iff the collections contain the same elements with the same cardinalities.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if the equator is null<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="cardinality(java.lang.Object,java.lang.Iterable)"><!-- --></A><A NAME="cardinality(O, java.lang.Iterable)"><!-- --></A><H3>
+cardinality</H3>
+<PRE>
+public static &lt;O&gt; int <B>cardinality</B>(O&nbsp;obj,
+                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? super O&gt;&nbsp;coll)</PRE>
+<DL>
+<DD>Returns the number of occurrences of <i>obj</i> in <i>coll</i>.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the type of object that the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> may contain.<DT><B>Parameters:</B><DD><CODE>obj</CODE> - the object to find the cardinality of<DD><CODE>coll</CODE> - the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> to search
+<DT><B>Returns:</B><DD>the the number of occurrences of obj in coll</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="find(java.lang.Iterable, org.apache.commons.collections4.Predicate)"><!-- --></A><H3>
+find</H3>
+<PRE>
+public static &lt;T&gt; T <B>find</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;T&gt;&nbsp;collection,
+                         <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super T&gt;&nbsp;predicate)</PRE>
+<DL>
+<DD>Finds the first element in the given collection which matches the given predicate.
+ <p>
+ If the input collection or predicate is null, or no element of the collection
+ matches the predicate, null is returned.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>T</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to search, may be null<DD><CODE>predicate</CODE> - the predicate to use, may be null
+<DT><B>Returns:</B><DD>the first element of the collection which matches the predicate or null if none could be found</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="forAllDo(java.lang.Iterable,org.apache.commons.collections4.Closure)"><!-- --></A><A NAME="forAllDo(java.lang.Iterable, C)"><!-- --></A><H3>
+forAllDo</H3>
+<PRE>
+public static &lt;T,C extends <A HREF="../../../../org/apache/commons/collections4/Closure.html" title="interface in org.apache.commons.collections4">Closure</A>&lt;? super T&gt;&gt; C <B>forAllDo</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;T&gt;&nbsp;collection,
+                                                          C&nbsp;closure)</PRE>
+<DL>
+<DD>Executes the given closure on each element in the collection.
+ <p>
+ If the input collection or closure is null, there is no change made.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>T</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> contains<DD><CODE>C</CODE> - the closure type<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to get the input from, may be null<DD><CODE>closure</CODE> - the closure to perform, may be null
+<DT><B>Returns:</B><DD>closure</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="forAllDo(java.util.Iterator,org.apache.commons.collections4.Closure)"><!-- --></A><A NAME="forAllDo(java.util.Iterator, C)"><!-- --></A><H3>
+forAllDo</H3>
+<PRE>
+public static &lt;T,C extends <A HREF="../../../../org/apache/commons/collections4/Closure.html" title="interface in org.apache.commons.collections4">Closure</A>&lt;? super T&gt;&gt; C <B>forAllDo</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util">Iterator</A>&lt;T&gt;&nbsp;iterator,
+                                                          C&nbsp;closure)</PRE>
+<DL>
+<DD>Executes the given closure on each element in the collection.
+ <p>
+ If the input collection or closure is null, there is no change made.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>T</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util"><CODE>Iterator</CODE></A> contains<DD><CODE>C</CODE> - the closure type<DT><B>Parameters:</B><DD><CODE>iterator</CODE> - the iterator to get the input from, may be null<DD><CODE>closure</CODE> - the closure to perform, may be null
+<DT><B>Returns:</B><DD>closure<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="forAllButLastDo(java.lang.Iterable,org.apache.commons.collections4.Closure)"><!-- --></A><A NAME="forAllButLastDo(java.lang.Iterable, C)"><!-- --></A><H3>
+forAllButLastDo</H3>
+<PRE>
+public static &lt;T,C extends <A HREF="../../../../org/apache/commons/collections4/Closure.html" title="interface in org.apache.commons.collections4">Closure</A>&lt;? super T&gt;&gt; T <B>forAllButLastDo</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;T&gt;&nbsp;collection,
+                                                                 C&nbsp;closure)</PRE>
+<DL>
+<DD>Executes the given closure on each but the last element in the collection.
+ <p>
+ If the input collection or closure is null, there is no change made.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>T</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> contains<DD><CODE>C</CODE> - the closure type<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to get the input from, may be null<DD><CODE>closure</CODE> - the closure to perform, may be null
+<DT><B>Returns:</B><DD>the last element in the collection, or null if either collection or closure is null<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="forAllButLastDo(java.util.Iterator,org.apache.commons.collections4.Closure)"><!-- --></A><A NAME="forAllButLastDo(java.util.Iterator, C)"><!-- --></A><H3>
+forAllButLastDo</H3>
+<PRE>
+public static &lt;T,C extends <A HREF="../../../../org/apache/commons/collections4/Closure.html" title="interface in org.apache.commons.collections4">Closure</A>&lt;? super T&gt;&gt; T <B>forAllButLastDo</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util">Iterator</A>&lt;T&gt;&nbsp;iterator,
+                                                                 C&nbsp;closure)</PRE>
+<DL>
+<DD>Executes the given closure on each but the last element in the collection.
+ <p>
+ If the input collection or closure is null, there is no change made.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>T</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> contains<DD><CODE>C</CODE> - the closure type<DT><B>Parameters:</B><DD><CODE>iterator</CODE> - the iterator to get the input from, may be null<DD><CODE>closure</CODE> - the closure to perform, may be null
+<DT><B>Returns:</B><DD>the last element in the collection, or null if either iterator or closure is null<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="filter(java.lang.Iterable, org.apache.commons.collections4.Predicate)"><!-- --></A><H3>
+filter</H3>
+<PRE>
+public static &lt;T&gt; boolean <B>filter</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;T&gt;&nbsp;collection,
+                                 <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super T&gt;&nbsp;predicate)</PRE>
+<DL>
+<DD>Filter the collection by applying a Predicate to each element. If the
+ predicate returns false, remove the element.
+ <p>
+ If the input collection or predicate is null, there is no change made.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>T</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to get the input from, may be null<DD><CODE>predicate</CODE> - the predicate to use as a filter, may be null
+<DT><B>Returns:</B><DD>true if the collection is modified by this call, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="filterInverse(java.lang.Iterable, org.apache.commons.collections4.Predicate)"><!-- --></A><H3>
+filterInverse</H3>
+<PRE>
+public static &lt;T&gt; boolean <B>filterInverse</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;T&gt;&nbsp;collection,
+                                        <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super T&gt;&nbsp;predicate)</PRE>
+<DL>
+<DD>Filter the collection by applying a Predicate to each element. If the
+ predicate returns true, remove the element.
+ <p>
+ This is equivalent to <pre>filter(collection, PredicateUtils.notPredicate(predicate))</pre>
+ if predicate is != null.
+ <p>
+ If the input collection or predicate is null, there is no change made.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>T</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to get the input from, may be null<DD><CODE>predicate</CODE> - the predicate to use as a filter, may be null
+<DT><B>Returns:</B><DD>true if the collection is modified by this call, false otherwise.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="transform(java.util.Collection, org.apache.commons.collections4.Transformer)"><!-- --></A><H3>
+transform</H3>
+<PRE>
+public static &lt;C&gt; void <B>transform</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+                                 <A HREF="../../../../org/apache/commons/collections4/Transformer.html" title="interface in org.apache.commons.collections4">Transformer</A>&lt;? super C,? extends C&gt;&nbsp;transformer)</PRE>
+<DL>
+<DD>Transform the collection by applying a Transformer to each element.
+ <p>
+ If the input collection or transformer is null, there is no change made.
+ <p>
+ This routine is best for Lists, for which set() is used to do the
+ transformations "in place." For other Collections, clear() and addAll()
+ are used to replace elements.
+ <p>
+ If the input collection controls its input, such as a Set, and the
+ Transformer creates duplicates (or are otherwise invalid), the collection
+ may reduce in size due to calling this method.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>C</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> to get the input from, may be null<DD><CODE>transformer</CODE> - the transformer to perform, may be null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="countMatches(java.lang.Iterable, org.apache.commons.collections4.Predicate)"><!-- --></A><H3>
+countMatches</H3>
+<PRE>
+public static &lt;C&gt; int <B>countMatches</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;C&gt;&nbsp;input,
+                                   <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super C&gt;&nbsp;predicate)</PRE>
+<DL>
+<DD>Counts the number of elements in the input collection that match the
+ predicate.
+ <p>
+ A <code>null</code> collection or predicate matches no elements.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>C</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>input</CODE> - the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> to get the input from, may be null<DD><CODE>predicate</CODE> - the predicate to use, may be null
+<DT><B>Returns:</B><DD>the number of matches for the predicate in the collection</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="exists(java.lang.Iterable, org.apache.commons.collections4.Predicate)"><!-- --></A><H3>
+exists</H3>
+<PRE>
+public static &lt;C&gt; boolean <B>exists</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;C&gt;&nbsp;input,
+                                 <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super C&gt;&nbsp;predicate)</PRE>
+<DL>
+<DD>Answers true if a predicate is true for at least one element of a
+ collection.
+ <p>
+ A <code>null</code> collection or predicate returns false.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>C</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>input</CODE> - the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> to get the input from, may be null<DD><CODE>predicate</CODE> - the predicate to use, may be null
+<DT><B>Returns:</B><DD>true if at least one element of the collection matches the predicate</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="select(java.lang.Iterable, org.apache.commons.collections4.Predicate)"><!-- --></A><H3>
+select</H3>
+<PRE>
+public static &lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt; <B>select</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;inputCollection,
+                                       <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super O&gt;&nbsp;predicate)</PRE>
+<DL>
+<DD>Selects all elements from input collection which match the given
+ predicate into an output collection.
+ <p>
+ A <code>null</code> predicate matches no elements.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>inputCollection</CODE> - the collection to get the input from, may not be null<DD><CODE>predicate</CODE> - the predicate to use, may be null
+<DT><B>Returns:</B><DD>the elements matching the predicate (new list)
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if the input collection is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="select(java.lang.Iterable,org.apache.commons.collections4.Predicate,java.util.Collection)"><!-- --></A><A NAME="select(java.lang.Iterable, org.apache.commons.collections4.Predicate, R)"><!-- --></A><H3>
+select</H3>
+<PRE>
+public static &lt;O,R extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;? super O&gt;&gt; R <B>select</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;inputCollection,
+                                                           <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super O&gt;&nbsp;predicate,
+                                                           R&nbsp;outputCollection)</PRE>
+<DL>
+<DD>Selects all elements from input collection which match the given
+ predicate and adds them to outputCollection.
+ <p>
+ If the input collection or predicate is null, there is no change to the
+ output collection.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> contains<DD><CODE>R</CODE> - the type of the output <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A><DT><B>Parameters:</B><DD><CODE>inputCollection</CODE> - the collection to get the input from, may be null<DD><CODE>predicate</CODE> - the predicate to use, may be null<DD><CODE>outputCollection</CODE> - the collection to output into, may not be null if the inputCollection
+   and predicate or not null
+<DT><B>Returns:</B><DD>the outputCollection</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="selectRejected(java.lang.Iterable, org.apache.commons.collections4.Predicate)"><!-- --></A><H3>
+selectRejected</H3>
+<PRE>
+public static &lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt; <B>selectRejected</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;inputCollection,
+                                               <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super O&gt;&nbsp;predicate)</PRE>
+<DL>
+<DD>Selects all elements from inputCollection which don't match the given
+ predicate into an output collection.
+ <p>
+ If the input predicate is <code>null</code>, the result is an empty
+ list.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>inputCollection</CODE> - the collection to get the input from, may not be null<DD><CODE>predicate</CODE> - the predicate to use, may be null
+<DT><B>Returns:</B><DD>the elements <b>not</b> matching the predicate (new list)
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if the input collection is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="selectRejected(java.lang.Iterable,org.apache.commons.collections4.Predicate,java.util.Collection)"><!-- --></A><A NAME="selectRejected(java.lang.Iterable, org.apache.commons.collections4.Predicate, R)"><!-- --></A><H3>
+selectRejected</H3>
+<PRE>
+public static &lt;O,R extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;? super O&gt;&gt; R <B>selectRejected</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;inputCollection,
+                                                                   <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super O&gt;&nbsp;predicate,
+                                                                   R&nbsp;outputCollection)</PRE>
+<DL>
+<DD>Selects all elements from inputCollection which don't match the given
+ predicate and adds them to outputCollection.
+ <p>
+ If the input predicate is <code>null</code>, no elements are added to
+ <code>outputCollection</code>.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> contains<DD><CODE>R</CODE> - the type of the output <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A><DT><B>Parameters:</B><DD><CODE>inputCollection</CODE> - the collection to get the input from, may be null<DD><CODE>predicate</CODE> - the predicate to use, may be null<DD><CODE>outputCollection</CODE> - the collection to output into, may not be null if the inputCollection
+   and predicate or not null
+<DT><B>Returns:</B><DD>outputCollection</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="collect(java.lang.Iterable, org.apache.commons.collections4.Transformer)"><!-- --></A><H3>
+collect</H3>
+<PRE>
+public static &lt;I,O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt; <B>collect</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;I&gt;&nbsp;inputCollection,
+                                          <A HREF="../../../../org/apache/commons/collections4/Transformer.html" title="interface in org.apache.commons.collections4">Transformer</A>&lt;? super I,? extends O&gt;&nbsp;transformer)</PRE>
+<DL>
+<DD>Returns a new Collection consisting of the elements of inputCollection
+ transformed by the given transformer.
+ <p>
+ If the input transformer is null, the result is an empty list.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>I</CODE> - the type of object in the input collection<DD><CODE>O</CODE> - the type of object in the output collection<DT><B>Parameters:</B><DD><CODE>inputCollection</CODE> - the collection to get the input from, may not be null<DD><CODE>transformer</CODE> - the transformer to use, may be null
+<DT><B>Returns:</B><DD>the transformed result (new list)
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if the input collection is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="collect(java.util.Iterator, org.apache.commons.collections4.Transformer)"><!-- --></A><H3>
+collect</H3>
+<PRE>
+public static &lt;I,O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;O&gt; <B>collect</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util">Iterator</A>&lt;I&gt;&nbsp;inputIterator,
+                                          <A HREF="../../../../org/apache/commons/collections4/Transformer.html" title="interface in org.apache.commons.collections4">Transformer</A>&lt;? super I,? extends O&gt;&nbsp;transformer)</PRE>
+<DL>
+<DD>Transforms all elements from the inputIterator with the given transformer
+ and adds them to the outputCollection.
+ <p>
+ If the input iterator or transformer is null, the result is an empty
+ list.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>I</CODE> - the type of object in the input collection<DD><CODE>O</CODE> - the type of object in the output collection<DT><B>Parameters:</B><DD><CODE>inputIterator</CODE> - the iterator to get the input from, may be null<DD><CODE>transformer</CODE> - the transformer to use, may be null
+<DT><B>Returns:</B><DD>the transformed result (new list)</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="collect(java.lang.Iterable,org.apache.commons.collections4.Transformer,java.util.Collection)"><!-- --></A><A NAME="collect(java.lang.Iterable, org.apache.commons.collections4.Transformer, R)"><!-- --></A><H3>
+collect</H3>
+<PRE>
+public static &lt;I,O,R extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;? super O&gt;&gt; R <B>collect</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends I&gt;&nbsp;inputCollection,
+                                                              <A HREF="../../../../org/apache/commons/collections4/Transformer.html" title="interface in org.apache.commons.collections4">Transformer</A>&lt;? super I,? extends O&gt;&nbsp;transformer,
+                                                              R&nbsp;outputCollection)</PRE>
+<DL>
+<DD>Transforms all elements from inputCollection with the given transformer
+ and adds them to the outputCollection.
+ <p>
+ If the input collection or transformer is null, there is no change to the
+ output collection.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>I</CODE> - the type of object in the input collection<DD><CODE>O</CODE> - the type of object in the output collection<DD><CODE>R</CODE> - the output type of the transformer - this extends O.<DT><B>Parameters:</B><DD><CODE>inputCollection</CODE> - the collection to get the input from, may be null<DD><CODE>transformer</CODE> - the transformer to use, may be null<DD><CODE>outputCollection</CODE> - the collection to output into, may not be null if the inputCollection
+   and transformer are not null
+<DT><B>Returns:</B><DD>the outputCollection with the transformed input added
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if the output collection is null and both, inputCollection and
+   transformer are not null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="collect(java.util.Iterator,org.apache.commons.collections4.Transformer,java.util.Collection)"><!-- --></A><A NAME="collect(java.util.Iterator, org.apache.commons.collections4.Transformer, R)"><!-- --></A><H3>
+collect</H3>
+<PRE>
+public static &lt;I,O,R extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;? super O&gt;&gt; R <B>collect</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util">Iterator</A>&lt;? extends I&gt;&nbsp;inputIterator,
+                                                              <A HREF="../../../../org/apache/commons/collections4/Transformer.html" title="interface in org.apache.commons.collections4">Transformer</A>&lt;? super I,? extends O&gt;&nbsp;transformer,
+                                                              R&nbsp;outputCollection)</PRE>
+<DL>
+<DD>Transforms all elements from the inputIterator with the given transformer
+ and adds them to the outputCollection.
+ <p>
+ If the input iterator or transformer is null, there is no change to the
+ output collection.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>I</CODE> - the type of object in the input collection<DD><CODE>O</CODE> - the type of object in the output collection<DD><CODE>R</CODE> - the output type of the transformer - this extends O.<DT><B>Parameters:</B><DD><CODE>inputIterator</CODE> - the iterator to get the input from, may be null<DD><CODE>transformer</CODE> - the transformer to use, may be null<DD><CODE>outputCollection</CODE> - the collection to output into, may not be null if the inputCollection
+   and transformer are not null
+<DT><B>Returns:</B><DD>the outputCollection with the transformed input added
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if the output collection is null and both, inputCollection and
+   transformer are not null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addIgnoreNull(java.util.Collection,java.lang.Object)"><!-- --></A><A NAME="addIgnoreNull(java.util.Collection, T)"><!-- --></A><H3>
+addIgnoreNull</H3>
+<PRE>
+public static &lt;T&gt; boolean <B>addIgnoreNull</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;T&gt;&nbsp;collection,
+                                        T&nbsp;object)</PRE>
+<DL>
+<DD>Adds an element to the collection unless the element is null.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>T</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to add to, must not be null<DD><CODE>object</CODE> - the object to add, if null it will not be added
+<DT><B>Returns:</B><DD>true if the collection changed
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if the collection is null<DT><B>Since:</B></DT>
+  <DD>3.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addAll(java.util.Collection, java.lang.Iterable)"><!-- --></A><H3>
+addAll</H3>
+<PRE>
+public static &lt;C&gt; boolean <B>addAll</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+                                 <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends C&gt;&nbsp;iterable)</PRE>
+<DL>
+<DD>Adds all elements in the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> to the given collection. If the
+ <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> is a <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> then it is cast and will be
+ added using <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html#addAll(java.util.Collection)" title="class or interface in java.util"><CODE>Collection.addAll(Collection)</CODE></A> instead of iterating.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>C</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to add to, must not be null<DD><CODE>iterable</CODE> - the iterable of elements to add, must not be null
+<DT><B>Returns:</B><DD>a boolean indicating whether the collection has changed or not.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if the collection or iterator is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addAll(java.util.Collection, java.util.Iterator)"><!-- --></A><H3>
+addAll</H3>
+<PRE>
+public static &lt;C&gt; boolean <B>addAll</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+                                 <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util">Iterator</A>&lt;? extends C&gt;&nbsp;iterator)</PRE>
+<DL>
+<DD>Adds all elements in the iteration to the given collection.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>C</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to add to, must not be null<DD><CODE>iterator</CODE> - the iterator of elements to add, must not be null
+<DT><B>Returns:</B><DD>a boolean indicating whether the collection has changed or not.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if the collection or iterator is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addAll(java.util.Collection, java.util.Enumeration)"><!-- --></A><H3>
+addAll</H3>
+<PRE>
+public static &lt;C&gt; boolean <B>addAll</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+                                 <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Enumeration.html" title="class or interface in java.util">Enumeration</A>&lt;? extends C&gt;&nbsp;enumeration)</PRE>
+<DL>
+<DD>Adds all elements in the enumeration to the given collection.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>C</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to add to, must not be null<DD><CODE>enumeration</CODE> - the enumeration of elements to add, must not be null
+<DT><B>Returns:</B><DD><code>true</code> if the collections was changed, <code>false</code> otherwise
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if the collection or enumeration is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="addAll(java.util.Collection,java.lang.Object)"><!-- --></A><A NAME="addAll(java.util.Collection, C[])"><!-- --></A><H3>
+addAll</H3>
+<PRE>
+public static &lt;C&gt; boolean <B>addAll</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+                                 C[]&nbsp;elements)</PRE>
+<DL>
+<DD>Adds all elements in the array to the given collection.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>C</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to add to, must not be null<DD><CODE>elements</CODE> - the array of elements to add, must not be null
+<DT><B>Returns:</B><DD><code>true</code> if the collection was changed, <code>false</code> otherwise
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if the collection or array is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="get(java.util.Iterator, int)"><!-- --></A><H3>
+get</H3>
+<PRE>
+public static &lt;T&gt; T <B>get</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util">Iterator</A>&lt;T&gt;&nbsp;iterator,
+                        int&nbsp;index)</PRE>
+<DL>
+<DD>Returns the <code>index</code>-th value in <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util"><CODE>Iterator</CODE></A>, throwing
+ <code>IndexOutOfBoundsException</code> if there is no such element.
+ <p>
+ The Iterator is advanced to <code>index</code> (or to the end, if
+ <code>index</code> exceeds the number of entries) as a side effect of this method.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>T</CODE> - the type of object in the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util"><CODE>Iterator</CODE></A><DT><B>Parameters:</B><DD><CODE>iterator</CODE> - the iterator to get a value from<DD><CODE>index</CODE> - the index to get
+<DT><B>Returns:</B><DD>the object at the specified index
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IndexOutOfBoundsException.html" title="class or interface in java.lang">IndexOutOfBoundsException</A></CODE> - if the index is invalid
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if the object type is invalid</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="get(java.lang.Iterable, int)"><!-- --></A><H3>
+get</H3>
+<PRE>
+public static &lt;T&gt; T <B>get</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;T&gt;&nbsp;iterable,
+                        int&nbsp;index)</PRE>
+<DL>
+<DD>Returns the <code>index</code>-th value in the <code>iterable</code>'s <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Iterator.html" title="class or interface in java.util"><CODE>Iterator</CODE></A>, throwing
+ <code>IndexOutOfBoundsException</code> if there is no such element.
+ <p>
+ If the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> is a <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util"><CODE>List</CODE></A>, then it will use <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html#get(int)" title="class or interface in java.util"><CODE>List.get(int)</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>T</CODE> - the type of object in the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A>.<DT><B>Parameters:</B><DD><CODE>iterable</CODE> - the <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang"><CODE>Iterable</CODE></A> to get a value from<DD><CODE>index</CODE> - the index to get
+<DT><B>Returns:</B><DD>the object at the specified index
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IndexOutOfBoundsException.html" title="class or interface in java.lang">IndexOutOfBoundsException</A></CODE> - if the index is invalid</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="get(java.lang.Object, int)"><!-- --></A><H3>
+get</H3>
+<PRE>
+public static <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A> <B>get</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A>&nbsp;object,
+                         int&nbsp;index)</PRE>
+<DL>
+<DD>Returns the <code>index</code>-th value in <code>object</code>, throwing
+ <code>IndexOutOfBoundsException</code> if there is no such element or
+ <code>IllegalArgumentException</code> if <code>object</code> is not an
+ instance of one of the supported types.
+ <p>
+ The supported types, and associated semantics are:
+ <ul>
+ <li> Map -- the value returned is the <code>Map.Entry</code> in position
+      <code>index</code> in the map's <code>entrySet</code> iterator,
+      if there is such an entry.</li>
+ <li> List -- this method is equivalent to the list's get method.</li>
+ <li> Array -- the <code>index</code>-th array entry is returned,
+      if there is such an entry; otherwise an <code>IndexOutOfBoundsException</code>
+      is thrown.</li>
+ <li> Collection -- the value returned is the <code>index</code>-th object
+      returned by the collection's default iterator, if there is such an element.</li>
+ <li> Iterator or Enumeration -- the value returned is the
+      <code>index</code>-th object in the Iterator/Enumeration, if there
+      is such an element.  The Iterator/Enumeration is advanced to
+      <code>index</code> (or to the end, if <code>index</code> exceeds the
+      number of entries) as a side effect of this method.</li>
+ </ul>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>object</CODE> - the object to get a value from<DD><CODE>index</CODE> - the index to get
+<DT><B>Returns:</B><DD>the object at the specified index
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IndexOutOfBoundsException.html" title="class or interface in java.lang">IndexOutOfBoundsException</A></CODE> - if the index is invalid
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if the object type is invalid</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="get(java.util.Map, int)"><!-- --></A><H3>
+get</H3>
+<PRE>
+public static &lt;K,V&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.Entry.html" title="class or interface in java.util">Map.Entry</A>&lt;K,V&gt; <B>get</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html" title="class or interface in java.util">Map</A>&lt;K,V&gt;&nbsp;map,
+                                       int&nbsp;index)</PRE>
+<DL>
+<DD>Returns the <code>index</code>-th <code>Map.Entry</code> in the <code>map</code>'s <code>entrySet</code>,
+ throwing <code>IndexOutOfBoundsException</code> if there is no such element.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>K</CODE> - the key type in the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html" title="class or interface in java.util"><CODE>Map</CODE></A><DD><CODE>V</CODE> - the key type in the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Map.html" title="class or interface in java.util"><CODE>Map</CODE></A><DT><B>Parameters:</B><DD><CODE>map</CODE> - the object to get a value from<DD><CODE>index</CODE> - the index to get
+<DT><B>Returns:</B><DD>the object at the specified index
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IndexOutOfBoundsException.html" title="class or interface in java.lang">IndexOutOfBoundsException</A></CODE> - if the index is invalid</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="size(java.lang.Object)"><!-- --></A><H3>
+size</H3>
+<PRE>
+public static int <B>size</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A>&nbsp;object)</PRE>
+<DL>
+<DD>Gets the size of the collection/iterator specified.
+ <p>
+ This method can handles objects as follows
+ <ul>
+ <li>Collection - the collection size
+ <li>Map - the map size
+ <li>Array - the array size
+ <li>Iterator - the number of elements remaining in the iterator
+ <li>Enumeration - the number of elements remaining in the enumeration
+ </ul>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>object</CODE> - the object to get the size of, may be null
+<DT><B>Returns:</B><DD>the size of the specified collection or 0 if the object was null
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - thrown if object is not recognised<DT><B>Since:</B></DT>
+  <DD>3.1</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="sizeIsEmpty(java.lang.Object)"><!-- --></A><H3>
+sizeIsEmpty</H3>
+<PRE>
+public static boolean <B>sizeIsEmpty</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A>&nbsp;object)</PRE>
+<DL>
+<DD>Checks if the specified collection/array/iterator is empty.
+ <p>
+ This method can handles objects as follows
+ <ul>
+ <li>Collection - via collection isEmpty
+ <li>Map - via map isEmpty
+ <li>Array - using array size
+ <li>Iterator - via hasNext
+ <li>Enumeration - via hasMoreElements
+ </ul>
+ <p>
+ Note: This method is named to avoid clashing with
+ <A HREF="../../../../org/apache/commons/collections4/CollectionUtils.html#isEmpty(java.util.Collection)"><CODE>isEmpty(Collection)</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>object</CODE> - the object to get the size of, may be null
+<DT><B>Returns:</B><DD>true if empty or null
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - thrown if object is not recognised<DT><B>Since:</B></DT>
+  <DD>3.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isEmpty(java.util.Collection)"><!-- --></A><H3>
+isEmpty</H3>
+<PRE>
+public static boolean <B>isEmpty</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;coll)</PRE>
+<DL>
+<DD>Null-safe check if the specified collection is empty.
+ <p>
+ Null returns true.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>coll</CODE> - the collection to check, may be null
+<DT><B>Returns:</B><DD>true if empty or null<DT><B>Since:</B></DT>
+  <DD>3.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isNotEmpty(java.util.Collection)"><!-- --></A><H3>
+isNotEmpty</H3>
+<PRE>
+public static boolean <B>isNotEmpty</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;coll)</PRE>
+<DL>
+<DD>Null-safe check if the specified collection is not empty.
+ <p>
+ Null returns false.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>coll</CODE> - the collection to check, may be null
+<DT><B>Returns:</B><DD>true if non-null and non-empty<DT><B>Since:</B></DT>
+  <DD>3.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="reverseArray(java.lang.Object[])"><!-- --></A><H3>
+reverseArray</H3>
+<PRE>
+public static void <B>reverseArray</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A>[]&nbsp;array)</PRE>
+<DL>
+<DD>Reverses the order of the given array.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>array</CODE> - the array to reverse</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isFull(java.util.Collection)"><!-- --></A><H3>
+isFull</H3>
+<PRE>
+public static boolean <B>isFull</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;? extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A>&gt;&nbsp;coll)</PRE>
+<DL>
+<DD>Returns true if no more elements can be added to the Collection.
+ <p>
+ This method uses the <A HREF="../../../../org/apache/commons/collections4/BoundedCollection.html" title="interface in org.apache.commons.collections4"><CODE>BoundedCollection</CODE></A> interface to determine the
+ full status. If the collection does not implement this interface then
+ false is returned.
+ <p>
+ The collection does not have to implement this interface directly.
+ If the collection has been decorated using the decorators subpackage
+ then these will be removed to access the BoundedCollection.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>coll</CODE> - the collection to check
+<DT><B>Returns:</B><DD>true if the BoundedCollection is full
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if the collection is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="maxSize(java.util.Collection)"><!-- --></A><H3>
+maxSize</H3>
+<PRE>
+public static int <B>maxSize</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;? extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Object.html" title="class or interface in java.lang">Object</A>&gt;&nbsp;coll)</PRE>
+<DL>
+<DD>Get the maximum number of elements that the Collection can contain.
+ <p>
+ This method uses the <A HREF="../../../../org/apache/commons/collections4/BoundedCollection.html" title="interface in org.apache.commons.collections4"><CODE>BoundedCollection</CODE></A> interface to determine the
+ maximum size. If the collection does not implement this interface then
+ -1 is returned.
+ <p>
+ The collection does not have to implement this interface directly.
+ If the collection has been decorated using the decorators subpackage
+ then these will be removed to access the BoundedCollection.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>coll</CODE> - the collection to check
+<DT><B>Returns:</B><DD>the maximum size of the BoundedCollection, -1 if no maximum size
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if the collection is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="collate(java.lang.Iterable, java.lang.Iterable)"><!-- --></A><H3>
+collate</H3>
+<PRE>
+public static &lt;O extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Comparable.html" title="class or interface in java.lang">Comparable</A>&lt;? super O&gt;&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;O&gt; <B>collate</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+                                                                <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b)</PRE>
+<DL>
+<DD>Merges two sorted Collections, a and b, into a single, sorted List
+ such that the natural ordering of the elements is retained.
+ <p>
+ Uses the standard O(n) merge algorithm for combining two sorted lists.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the element type<DT><B>Parameters:</B><DD><CODE>a</CODE> - the first collection, must not be null<DD><CODE>b</CODE> - the second collection, must not be null
+<DT><B>Returns:</B><DD>a new sorted List, containing the elements of Collection a and b
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if either collection is null<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="collate(java.lang.Iterable, java.lang.Iterable, boolean)"><!-- --></A><H3>
+collate</H3>
+<PRE>
+public static &lt;O extends <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Comparable.html" title="class or interface in java.lang">Comparable</A>&lt;? super O&gt;&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;O&gt; <B>collate</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+                                                                <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b,
+                                                                boolean&nbsp;includeDuplicates)</PRE>
+<DL>
+<DD>/**
+ Merges two sorted Collections, a and b, into a single, sorted List
+ such that the natural ordering of the elements is retained.
+ <p>
+ Uses the standard O(n) merge algorithm for combining two sorted lists.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the element type<DT><B>Parameters:</B><DD><CODE>a</CODE> - the first collection, must not be null<DD><CODE>b</CODE> - the second collection, must not be null<DD><CODE>includeDuplicates</CODE> - if <code>true</code> duplicate elements will be retained, otherwise
+   they will be removed in the output collection
+<DT><B>Returns:</B><DD>a new sorted List, containing the elements of Collection a and b
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if either collection is null<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="collate(java.lang.Iterable, java.lang.Iterable, java.util.Comparator)"><!-- --></A><H3>
+collate</H3>
+<PRE>
+public static &lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;O&gt; <B>collate</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b,
+                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Comparator.html" title="class or interface in java.util">Comparator</A>&lt;? super O&gt;&nbsp;c)</PRE>
+<DL>
+<DD>Merges two sorted Collections, a and b, into a single, sorted List
+ such that the ordering of the elements according to Comparator c is retained.
+ <p>
+ Uses the standard O(n) merge algorithm for combining two sorted lists.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the element type<DT><B>Parameters:</B><DD><CODE>a</CODE> - the first collection, must not be null<DD><CODE>b</CODE> - the second collection, must not be null<DD><CODE>c</CODE> - the comparator to use for the merge.
+<DT><B>Returns:</B><DD>a new sorted List, containing the elements of Collection a and b
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if either collection or the comparator is null<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="collate(java.lang.Iterable, java.lang.Iterable, java.util.Comparator, boolean)"><!-- --></A><H3>
+collate</H3>
+<PRE>
+public static &lt;O&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;O&gt; <B>collate</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;a,
+                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/Iterable.html" title="class or interface in java.lang">Iterable</A>&lt;? extends O&gt;&nbsp;b,
+                                  <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Comparator.html" title="class or interface in java.util">Comparator</A>&lt;? super O&gt;&nbsp;c,
+                                  boolean&nbsp;includeDuplicates)</PRE>
+<DL>
+<DD>Merges two sorted Collections, a and b, into a single, sorted List
+ such that the ordering of the elements according to Comparator c is retained.
+ <p>
+ Uses the standard O(n) merge algorithm for combining two sorted lists.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>O</CODE> - the element type<DT><B>Parameters:</B><DD><CODE>a</CODE> - the first collection, must not be null<DD><CODE>b</CODE> - the second collection, must not be null<DD><CODE>c</CODE> - the comparator to use for the merge.<DD><CODE>includeDuplicates</CODE> - if <code>true</code> duplicate elements will be retained, otherwise
+   they will be removed in the output collection
+<DT><B>Returns:</B><DD>a new sorted List, containing the elements of Collection a and b
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if either collection or the comparator is null<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="permutations(java.util.Collection)"><!-- --></A><H3>
+permutations</H3>
+<PRE>
+public static &lt;E&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/List.html" title="class or interface in java.util">List</A>&lt;E&gt;&gt; <B>permutations</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;E&gt;&nbsp;collection)</PRE>
+<DL>
+<DD>Returns a <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> of all the permutations of the input collection.
+ <p>
+ NOTE: the number of permutations of a given collection is equal to n!, where
+ n is the size of the collection. Thus, the resulting collection will become
+ <b>very</b> large for collections &gt; 10 (e.g. 10! = 3628800, 15! = 1307674368000).
+ <p>
+ For larger collections it is advised to use a <A HREF="../../../../org/apache/commons/collections4/iterators/PermutationIterator.html" title="class in org.apache.commons.collections4.iterators"><CODE>PermutationIterator</CODE></A> to
+ iterate over all permutations.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>E</CODE> - the element type<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to create permutations for, may not be null
+<DT><B>Returns:</B><DD>an unordered collection of all permutations of the input collection
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if collection is null<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+<DT><B>See Also:</B><DD><A HREF="../../../../org/apache/commons/collections4/iterators/PermutationIterator.html" title="class in org.apache.commons.collections4.iterators"><CODE>PermutationIterator</CODE></A></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="retainAll(java.util.Collection, java.util.Collection)"><!-- --></A><H3>
+retainAll</H3>
+<PRE>
+public static &lt;C&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt; <B>retainAll</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+                                          <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;retain)</PRE>
+<DL>
+<DD>Returns a collection containing all the elements in <code>collection</code>
+ that are also in <code>retain</code>. The cardinality of an element <code>e</code>
+ in the returned collection is the same as the cardinality of <code>e</code>
+ in <code>collection</code> unless <code>retain</code> does not contain <code>e</code>, in which
+ case the cardinality is zero. This method is useful if you do not wish to modify
+ the collection <code>c</code> and thus cannot call <code>c.retainAll(retain);</code>.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>C</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection whose contents are the target of the #retailAll operation<DD><CODE>retain</CODE> - the collection containing the elements to be retained in the returned collection
+<DT><B>Returns:</B><DD>a <code>Collection</code> containing all the elements of <code>collection</code>
+ that occur at least once in <code>retain</code>.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if either parameter is null<DT><B>Since:</B></DT>
+  <DD>3.2</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeAll(java.util.Collection, java.util.Collection)"><!-- --></A><H3>
+removeAll</H3>
+<PRE>
+public static &lt;E&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;E&gt; <B>removeAll</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;E&gt;&nbsp;collection,
+                                          <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;?&gt;&nbsp;remove)</PRE>
+<DL>
+<DD>Removes the elements in <code>remove</code> from <code>collection</code>. That is, this
+ method returns a collection containing all the elements in <code>c</code>
+ that are not in <code>remove</code>. The cardinality of an element <code>e</code>
+ in the returned collection is the same as the cardinality of <code>e</code>
+ in <code>collection</code> unless <code>remove</code> contains <code>e</code>, in which
+ case the cardinality is zero. This method is useful if you do not wish to modify
+ the collection <code>c</code> and thus cannot call <code>collection.removeAll(remove);</code>.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>E</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection from which items are removed (in the returned collection)<DD><CODE>remove</CODE> - the items to be removed from the returned <code>collection</code>
+<DT><B>Returns:</B><DD>a <code>Collection</code> containing all the elements of <code>collection</code> except
+ any elements that also occur in <code>remove</code>.
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html" title="class or interface in java.lang">NullPointerException</A></CODE> - if either parameter is null<DT><B>Since:</B></DT>
+  <DD>4.0 (method existed in 3.2 but was completely broken)</DD>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="synchronizedCollection(java.util.Collection)"><!-- --></A><H3>
+synchronizedCollection</H3>
+<PRE>
+public static &lt;C&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt; <B>synchronizedCollection</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection)</PRE>
+<DL>
+<DD>Returns a synchronized collection backed by the given collection.
+ <p>
+ You must manually synchronize on the returned buffer's iterator to
+ avoid non-deterministic behavior:
+
+ <pre>
+ Collection c = CollectionUtils.synchronizedCollection(myCollection);
+ synchronized (c) {
+     Iterator i = c.iterator();
+     while (i.hasNext()) {
+         process (i.next());
+     }
+ }
+ </pre>
+
+ This method uses the implementation in the decorators subpackage.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>C</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to synchronize, must not be null
+<DT><B>Returns:</B><DD>a synchronized collection backed by the given collection
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if the collection is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unmodifiableCollection(java.util.Collection)"><!-- --></A><H3>
+unmodifiableCollection</H3>
+<PRE>
+public static &lt;C&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt; <B>unmodifiableCollection</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection)</PRE>
+<DL>
+<DD>Returns an unmodifiable collection backed by the given collection.
+ <p>
+ This method uses the implementation in the decorators subpackage.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>C</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to make unmodifiable, must not be null
+<DT><B>Returns:</B><DD>an unmodifiable collection backed by the given collection
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if the collection is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="predicatedCollection(java.util.Collection, org.apache.commons.collections4.Predicate)"><!-- --></A><H3>
+predicatedCollection</H3>
+<PRE>
+public static &lt;C&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt; <B>predicatedCollection</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;C&gt;&nbsp;collection,
+                                                     <A HREF="../../../../org/apache/commons/collections4/Predicate.html" title="interface in org.apache.commons.collections4">Predicate</A>&lt;? super C&gt;&nbsp;predicate)</PRE>
+<DL>
+<DD>Returns a predicated (validating) collection backed by the given collection.
+ <p>
+ Only objects that pass the test in the given predicate can be added to the collection.
+ Trying to add an invalid object results in an IllegalArgumentException.
+ It is important not to use the original collection after invoking this method,
+ as it is a backdoor for adding invalid objects.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>C</CODE> - the type of objects in the Collection.<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to predicate, must not be null<DD><CODE>predicate</CODE> - the predicate for the collection, must not be null
+<DT><B>Returns:</B><DD>a predicated collection backed by the given collection
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if the Collection is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="transformingCollection(java.util.Collection, org.apache.commons.collections4.Transformer)"><!-- --></A><H3>
+transformingCollection</H3>
+<PRE>
+public static &lt;E&gt; <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;E&gt; <B>transformingCollection</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;E&gt;&nbsp;collection,
+                                                       <A HREF="../../../../org/apache/commons/collections4/Transformer.html" title="interface in org.apache.commons.collections4">Transformer</A>&lt;? super E,? extends E&gt;&nbsp;transformer)</PRE>
+<DL>
+<DD>Returns a transformed bag backed by the given collection.
+ <p>
+ Each object is passed through the transformer as it is added to the
+ Collection. It is important not to use the original collection after invoking this
+ method, as it is a backdoor for adding untransformed objects.
+ <p>
+ Existing entries in the specified collection will not be transformed.
+ If you want that behaviour, see <A HREF="../../../../org/apache/commons/collections4/collection/TransformedCollection.html#transformedCollection(java.util.Collection, org.apache.commons.collections4.Transformer)"><CODE>TransformedCollection.transformedCollection(java.util.Collection<E>, org.apache.commons.collections4.Transformer<? super E, ? extends E>)</CODE></A>.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>E</CODE> - the type of object the <A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util"><CODE>Collection</CODE></A> contains<DT><B>Parameters:</B><DD><CODE>collection</CODE> - the collection to predicate, must not be null<DD><CODE>transformer</CODE> - the transformer for the collection, must not be null
+<DT><B>Returns:</B><DD>a transformed collection backed by the given collection
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if the Collection or Transformer is null</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="extractSingleton(java.util.Collection)"><!-- --></A><H3>
+extractSingleton</H3>
+<PRE>
+public static &lt;E&gt; E <B>extractSingleton</B>(<A HREF="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html" title="class or interface in java.util">Collection</A>&lt;E&gt;&nbsp;collection)</PRE>
+<DL>
+<DD>Extract the lone element of the specified Collection.
+<P>
+<DD><DL>
+<DT><B>Type Parameters:</B><DD><CODE>E</CODE> - collection type<DT><B>Parameters:</B><DD><CODE>collection</CODE> - to read
+<DT><B>Returns:</B><DD>sole member of collection
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="http://download.oracle.com/javase/6/docs/api/java/lang/IllegalArgumentException.html" title="class or interface in java.lang">IllegalArgumentException</A></CODE> - if collection is null/empty or contains more than one element<DT><B>Since:</B></DT>
+  <DD>4.0</DD>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/CollectionUtils.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+</EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../org/apache/commons/collections4/ClosureUtils.html" title="class in org.apache.commons.collections4"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../org/apache/commons/collections4/ComparatorUtils.html" title="class in org.apache.commons.collections4"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?org/apache/commons/collections4/CollectionUtils.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="CollectionUtils.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+Copyright &#169; 2001&#x2013;2013 <a href="http://www.apache.org/">The Apache Software Foundation</a>. All rights reserved.
+</BODY>
+</HTML>
