@@ -16,14 +16,24 @@ public final class EmojiMapUtil {
         }
         Matcher matcher = COLON_REGEX.matcher(s);
 
-        while (matcher.find()) {
-            String potentialEmoji = String.format(":%s:", matcher.group(1));
-            String replacement = CHEAT_SHEET_TO_UNICODE.get(potentialEmoji);
+        int length = s.length();
+        for (int i = 0; i < length && matcher.find(i); i++) {
             
-            if (!TextUtils.isEmpty(replacement)) {
-                s = s.replace(potentialEmoji, replacement);
+            int groupCount = matcher.groupCount();
+            for (int j = 0; j < groupCount; j++) {
+                String potentialEmoji = matcher.group(j);
+                String replacement = CHEAT_SHEET_TO_UNICODE.get(potentialEmoji);
+                
+                if (!TextUtils.isEmpty(replacement)) {
+                    s = s.replace(potentialEmoji, replacement);
+                    i = s.indexOf(replacement);
+                    length = s.length();
+                    matcher = COLON_REGEX.matcher(s);
+                    break;
+                }
             }
         }
+
         return s;
     }
 
