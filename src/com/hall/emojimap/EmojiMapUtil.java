@@ -1,10 +1,9 @@
 package com.hall.emojimap;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.apache.commons.collections4.BidiMap;
-import org.apache.commons.collections4.bidimap.DualHashBidiMap;
 
 import android.text.TextUtils;
 
@@ -18,11 +17,9 @@ public final class EmojiMapUtil {
         Matcher matcher = COLON_REGEX.matcher(s);
 
         while (matcher.find()) {
-            String potentialEmoji = matcher.group(1);
-            String replacement = null;
-
-            potentialEmoji = String.format(":%s:", potentialEmoji);
-            replacement = EMOJI_TABLE.getKey(potentialEmoji);
+            String potentialEmoji = String.format(":%s:", matcher.group(1));
+            String replacement = CHEAT_SHEET_TO_UNICODE.get(potentialEmoji);
+            
             if (!TextUtils.isEmpty(replacement)) {
                 s = s.replace(potentialEmoji, replacement);
             }
@@ -45,7 +42,7 @@ public final class EmojiMapUtil {
             if ((Character.isLowSurrogate(key.charAt(0)) || Character.isHighSurrogate(key.charAt(0))) && s.length() > i + 1) {
                 key = s.substring(i, i + 2);
             }
-            String emoji = EMOJI_TABLE.get(key);
+            String emoji = UNICODE_TO_CHEAT_SHEET.get(key);
             if (null != emoji) {
                 s = s.replace(key, emoji);
             }
@@ -55,8 +52,9 @@ public final class EmojiMapUtil {
 
     private static final Pattern COLON_REGEX = Pattern.compile(Pattern.quote(":") + "(.*?)" + Pattern.quote(":"));
 
-    private static final BidiMap<String, String> EMOJI_TABLE = new DualHashBidiMap<String, String>();
-
+    private static final Map<String, String> UNICODE_TO_CHEAT_SHEET = new HashMap<String, String>();
+    private static final Map<String, String> CHEAT_SHEET_TO_UNICODE = new HashMap<String, String>();
+    
     private final static String[][] UNICODE_MAPPING = new String[][] {
         {":airplane:"                          ,"\u2708"},
         {":alarm_clock:"                       ,"\u23F0"},
@@ -904,7 +902,8 @@ public final class EmojiMapUtil {
 
     static {
         for (String[] s : UNICODE_MAPPING) {
-            EMOJI_TABLE.put(s[1], s[0]);
+            CHEAT_SHEET_TO_UNICODE.put(s[0],  s[1]);
+            UNICODE_TO_CHEAT_SHEET.put(s[1], s[0]);
         }
     }
 }

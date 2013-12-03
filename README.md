@@ -14,8 +14,6 @@ While this library will work with all versions of Android, displaying unicode em
 
 ##License
 
-Apache Commons Collections is included in this project and is under the [Apache Commons 2.0](http://www.apache.org/licenses/LICENSE-2.0)
-
-The rest is licensed under [Apache Commons 2.0](http://www.apache.org/licenses/LICENSE-2.0) as well.
+This project is licensed under [Apache Commons 2.0](http://www.apache.org/licenses/LICENSE-2.0) as well.
 
 Made by the folks at [Hall.com](https://hall.com)
