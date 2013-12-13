@@ -2,7 +2,7 @@
 
 This Android library will convert Strings containing unicode Emoji characters to their [Emoji Cheat Sheet](http://www.emoji-cheat-sheet.com/) equiavelent and vice-versa. 
 
-While this library will work with all versions of Android, displaying unicode emojis in Android Widgets is unavailable before Android 4.1.
+While this library will work with all versions of Android, displaying unicode emojis in Android Widgets is unavailable before API 17.
 
 ##Usage
 
