@@ -33,7 +33,6 @@ public final class EmojiMapUtil {
                 }
             }
         }
-
         return s;
     }
 
@@ -60,7 +59,7 @@ public final class EmojiMapUtil {
         return s;
     }
 
-    private static final Pattern COLON_REGEX = Pattern.compile(Pattern.quote(":") + "(.*?)" + Pattern.quote(":"));
+    private static final Pattern COLON_REGEX = Pattern.compile(":(.{1,23}):");
 
     private static final Map<String, String> UNICODE_TO_CHEAT_SHEET = new HashMap<String, String>();
     private static final Map<String, String> CHEAT_SHEET_TO_UNICODE = new HashMap<String, String>();
