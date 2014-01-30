@@ -14,25 +14,18 @@ public final class EmojiMapUtil {
         if (TextUtils.isEmpty(s)) {
             return "";
         }
+        
         Matcher matcher = COLON_REGEX.matcher(s);
-
-        int length = s.length();
-        for (int i = 0; i < length && matcher.find(i); i++) {
+        
+        while (matcher.find()) {
+            String potentialEmoji = matcher.group();
+            String replacement = CHEAT_SHEET_TO_UNICODE.get(potentialEmoji);
             
-            int groupCount = matcher.groupCount();
-            for (int j = 0; j < groupCount; j++) {
-                String potentialEmoji = matcher.group(j);
-                String replacement = CHEAT_SHEET_TO_UNICODE.get(potentialEmoji);
-                
-                if (!TextUtils.isEmpty(replacement)) {
-                    s = s.replace(potentialEmoji, replacement);
-                    i = s.indexOf(replacement);
-                    length = s.length();
-                    matcher = COLON_REGEX.matcher(s);
-                    break;
-                }
+            if (!TextUtils.isEmpty(replacement)) {
+                s = s.replace(potentialEmoji, replacement);
             }
         }
+        
         return s;
     }
 
@@ -59,7 +52,7 @@ public final class EmojiMapUtil {
         return s;
     }
 
-    private static final Pattern COLON_REGEX = Pattern.compile(":(.{1,23}):");
+    private static final Pattern COLON_REGEX = Pattern.compile(":[a-z0-9+_-]{1,31}:");
 
     private static final Map<String, String> UNICODE_TO_CHEAT_SHEET = new HashMap<String, String>();
     private static final Map<String, String> CHEAT_SHEET_TO_UNICODE = new HashMap<String, String>();
